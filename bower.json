@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "saurabh <srbhkmr23@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angular": "^1.6.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
