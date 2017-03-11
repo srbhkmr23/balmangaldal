@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en" ng-app="myapp">
+<html lang="en" ng-app="myapp" ng-controller="indexcontroller">
 <head>
 <title>BAL MANGAL DAL</title>    
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" /><!-- fontawesome -->     
@@ -85,8 +85,8 @@ $(document).ready(function(){
 
 
 
-	
-	<div  ui-view></div>  
+	<route-loading-indicator></route-loading-indicator>
+	<div ng-if="!isRouteLoading" ui-view></div>  
 
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	  <!-- Angular -->
@@ -97,7 +97,7 @@ $(document).ready(function(){
   <script type="text/javascript" src="./js/header.js"></script>
    <script type="text/javascript" src="./js/footer.js"></script>
    <script type="text/javascript" src="./js/right_template.js"></script>
-
+    <script type="text/javascript" src="./js/stateloader.js"></script>
 
 </body>
 </html>

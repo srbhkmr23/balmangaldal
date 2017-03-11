@@ -25,6 +25,7 @@ app.use('/', express.static(path.join(__dirname)));
 
 var server = app.listen(process.env.PORT || 3000,function () {
 
+	console.log("process.env.PORT",process.env.PORT)
   console.log("node server is running");
 })
 
