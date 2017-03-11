@@ -11,15 +11,13 @@ myapp.config(function($stateProvider, $urlRouterProvider){
         templateUrl: "../templates/home.html",
         controller: function($scope){
           $().UItoTop({ easingType: 'easeOutQuart' });
+       
         }        
     })
 
     .state('about', {
         url: "/about",
-        templateUrl: "../templates/about.html",
-        controller: function($scope){
-          
-        }
+        templateUrl: "../templates/about.html"
     })
       
     .state('gallery', {

@@ -1,5 +1,4 @@
-<header>
-
+<header ng-controller="headerController">
 
 		<div class="w3layouts-top-strip">
 			<div class="container">
@@ -27,14 +26,14 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a class="active" ui-sref="home">Home</a></li>
-					<li><a ui-sref="about">About</a></li>
+					<li ng-click="changeLink('homeLink')"><a href="javascript:void(0)" ng-class="homeLink==true ? 'active' : '' " ui-sref="home">Home  </a></li>
+					<li ng-click="changeLink('aboutLink')"><a href="javascript:void(0)" ng-class="aboutLink==true ? 'active' : '' " ui-sref="about">About </a></li>
 					
 					
 				
-					<li><a ui-sref="gallery">Gallery</a></li>
+					<li ng-click="changeLink('galleryLink')"><a href="javascript:void(0)" ng-class="galleryLink==true ? 'active' : '' " ui-sref="gallery">Gallery</a></li>
 					
-					<li><a ui-sref="contact">Contact</a></li>
+					<li ng-click="changeLink('contactLink')"><a href="javascript:void(0)" ng-class="contactLink==true ? 'active' : '' " ui-sref="contact">Contact</a></li>
 				  </ul>
 				</div><!-- /.navbar-collapse -->
 				<div class="w3_agile_login">
