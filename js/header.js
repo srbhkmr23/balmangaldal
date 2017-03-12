@@ -6,6 +6,7 @@ myapp.controller('headerController',function($scope,$rootScope){
 		$scope.aboutLink=false;
 		$scope.galleryLink=false;
 		$scope.contactLink=false;
+		$scope.chatLink=false;
 		$scope[linkforchange]=true;
 		
 	}

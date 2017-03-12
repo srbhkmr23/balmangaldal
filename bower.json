@@ -20,6 +20,15 @@
     "angular": "^1.6.2",
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.1",
-    "font-awesome": "fontawesome#^4.7.0"
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular-cookies": "^1.6.3",
+    "angular-socket-io": "^0.7.0",
+    "socket-io": "^1.0.0",
+    "socket-io-client": "^1.4.5",
+    "ng-cookies": "^1.1.1",
+    "angular-resource": "^1.6.3"
+  },
+  "resolutions": {
+    "angular": "^1.6.2"
   }
 }

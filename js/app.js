@@ -1,4 +1,4 @@
-var myapp = angular.module('myapp', ["ui.router"]);
+var myapp = angular.module('myapp', ["ui.router","ngCookies","ngResource","ngSanitize","btford.socket-io"]);
 
 myapp.config(function($stateProvider, $urlRouterProvider){
   
@@ -28,5 +28,10 @@ myapp.config(function($stateProvider, $urlRouterProvider){
     .state('contact', {
         url: "/contact",
         templateUrl: "../templates/contact.html"
+    })
+
+    .state('chat', {
+        url: "/chat",
+        templateUrl: "../templates/chat.html"
     })
 });
