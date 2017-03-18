@@ -26,7 +26,8 @@
     "socket-io": "^1.0.0",
     "socket-io-client": "^1.4.5",
     "ng-cookies": "^1.1.1",
-    "angular-resource": "^1.6.3"
+    "angular-resource": "^1.6.3",
+    "moment": "^2.17.1"
   },
   "resolutions": {
     "angular": "^1.6.2"

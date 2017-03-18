@@ -75,6 +75,8 @@ body {
   float: left;
   text-align: center;
    line-height: 50px;
+   font-size: 10px;
+  line-height: 42px;
 }
 .messages .message.left .text_wrapper {
   background-color: #ffe6cb;
@@ -91,7 +93,8 @@ body {
   background-color: #fdbf68;
   float: right;
    text-align: center;
-   line-height: 50px;
+   line-height: 42px;
+   font-size:10px;
 }
 .messages .message.right .text_wrapper {
   background-color: #c7eafc;
@@ -99,7 +102,7 @@ body {
   float: right;
 }
 .messages .message.right .text_wrapper::after, .messages .message.right .text_wrapper::before {
-  left: 100%;
+  left: 99%;
   border-left-color: #c7eafc;
 }
 .messages .message.right .text {
@@ -109,21 +112,21 @@ body {
   opacity: 1;
 }
 .messages .message .avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: inline-block;
 }
 .messages .message .text_wrapper {
   display: inline-block;
-  padding: 20px;
+  padding: 5px;
   border-radius: 6px;
   width: calc(100% - 85px);
   min-width: 100px;
   position: relative;
 }
 .messages .message .text_wrapper::after, .messages .message .text_wrapper:before {
-  top: 18px;
+  top: 3px;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -140,7 +143,7 @@ body {
   margin-top: -2px;
 }
 .messages .message .text_wrapper .text {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
 }
 
@@ -206,4 +209,8 @@ body {
   position: absolute;
   padding: 0 20px;
   margin-left:10px; 
+}
+
+.form-control {
+/*  width: 70%;*/
 }

@@ -19,16 +19,7 @@
 	  	<div class="w3ls_portfolio_grids w3_agile_mail_grids">	
 		  	<form name="userForm"  novalidate>
 
-		  		<div class='row'>
-			      <center>
-			      	<h4>Total Connected Users : <span>{{totalUser}}</span><h4>
-			      	<br/>
-			      	<h6 ng-if="username!=name" style="height:5px" ng-bind="typeMessage"></h6>
-			      </center>
-			    </div>
-			    <div class='row'>
-			       &nbsp;
-			    </div>
+		  		
 
 			    <div class='row'>
 
@@ -53,8 +44,10 @@
 					   <ul class="messages">
 					   	<li class="heightclass" ng-repeat="(key, value) in messageBasedOnDate">
 					   		
-					   	   <div style="background-color: #fff"><hr><center><span>{{key}}</span></center> <hr></div>
+					   	   <div style="background-color: #fff;height: 30px;margin-bottom: 15px;padding-top: 5px"><center><span>{{dateFormat(value[0].created_at)}}</span></center> </div>
+
 						   <div ng-repeat="obj in value track by $index"  ng-class="obj.source == username? 'message left appeared' : 'message right appeared' " >
+						   	<!-- 	12:21:43 PM -->
 						      <div class="avatar">{{obj.source.length > 7 ? obj.source.substring(0,7) :   obj.source}}</div>
 						      <div class="text_wrapper">
 						         <div class="text">{{obj.message}}</div>
@@ -74,44 +67,22 @@
 			    </div>
 
 			    <div class='row'>
-			   <!--  	<div class='col-md-9'>
+			    	<div class='col-lg-8 col-md-8 col-sm-8 col-xs-9'>
 				       <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.name.$pristine }">
-				            <label>Message</label>
-				            <input type="text" name="message" class="form-control" ng-model="message" required>
-				            <p ng-show="userForm.message.$invalid && !userForm.message.$pristine" class="help-block">Type your message</p>
+
+				       	
+				       		<input type="text" name="message" class="form-control" ng-model="message" required/>
+				       	
 				        </div>
-				    </div> -->
-
-				    <div class='col-md-12'>
-				    	<!-- <button class='btn btn-sm btn-primary' ng-disabled="userForm.$invalid" ng-click="sendMessage(message)">Send!</button> -->
-
-
-				    	<div class="bottom_wrapper clearfix">
-						   <div class="message_input_wrapper">
-
-							    <div  ng-class="{'has-error' : userForm.message.$invalid &&!userForm.name.$pristine }">
-					      
-					       <input type="text"  class="message_input" ng-keyup="keyUp(this)" placeholder="Type your message here... " name="message" ng-model="message" required>
-					          <!--   <p ng-show="userForm.message.$invalid && !userForm.message.$pristine" class="help-block">Type your message</p> -->
-					       }
-					        </div>
-
-						   <!-- <input class="message_input" placeholder="Type your message here..."> -->
-
-						   </div>
-
-						   <button class='btn btn-sm btn-primary message_send_button' ng-disabled="userForm.$invalid" ng-click="sendMessage(message)">Send! </button>
-
-						   <!-- <div class="send_message">
-						      <div class="icon"></div>
-						      <div>Send</div>
-						   </div> -->
-						</div>
-
-
+				       
 				    </div>
-			       
+
+				    <div class='col-lg-4 col-md-4 col-sm-4 col-xs-3'>
+		       		    <button class='btn btn-sm btn-primary' ng-disabled="userForm.$invalid" ng-click="sendMessage(message)">Send!</button> 
+				    </div>
+		       
 			    </div>
+
 			</form>
 		</div>
 

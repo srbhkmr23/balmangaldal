@@ -37,7 +37,7 @@ myapp.controller('chatCtrl', function ($log, $scope, chatSocket,socket) {
 		     
 		    		 //$scope.messageLog.push({'source':data.source,'message':data.message})
 		    		$scope.messageLog=data.messages;
-		    		$scope.messageLog.sort(dynamicSort1("date"));
+		    		// $scope.messageLog.sort(dynamicSort1("date"));
 		    		$scope.messageBasedOnDate = groupBy( $scope.messageLog, 'date');
 
 		    		for (i in $scope.messageBasedOnDate){
@@ -88,6 +88,20 @@ myapp.controller('chatCtrl', function ($log, $scope, chatSocket,socket) {
     $scope.keyUp=function(event){
     	//console.log(event.message);
     	 socket.emit('typing',{"name":$scope.username});
+    }
+
+
+    $scope.dateFormat=function(date){
+
+    	// var datestring=new Date(date.toString());
+
+    	// datestring=datestring.toString().substring(0,datestring.toString().indexOf('GMT'));
+    	// console.log(datestring)
+    	// return datestring;
+
+    	return moment(date.toString()).format("MMMM Do YYYY")
+
+
     }
 
     function groupBy(arr, property) {
